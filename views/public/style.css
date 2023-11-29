@@ -1,0 +1,14 @@
+.post{
+    background-color: wheat;
+}
+h1{
+    color: rgb(77, 9, 22);
+}
+.username{
+    color:red;
+    font-style: italic;
+}
+
+.content{
+    color:cornflowerblue;
+}
