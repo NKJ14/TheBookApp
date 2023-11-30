@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All posts</title>
-    <link rel="stylesheet" href="backend/public/style.css">
+    <style>
+        .post{
+            background-color: wheat;
+        }
+        .username{
+            color: slateblue;
+        }
+        .content{
+            color:darkblue;
+        }
+    </style>
 </head>
 <body>
     <h1>The book</h1>
@@ -17,9 +27,11 @@
             <br>
             <a href="http://localhost:3000/posts/<%=post.id%>">See in detail</a>
             <a href="http://localhost:3000/posts/<%=post.id%>/edit">edit</a>
+            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                <button>delete post</button>
+            </form>
         </div>
     <% } %>
 
 </body>
 </html>
-
