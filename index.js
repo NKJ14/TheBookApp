@@ -72,6 +72,13 @@ app.patch("/posts/:id", (req,res)=>{
     res.redirect("/posts");
 })
 
+app.delete("/posts/:id",(req,res)=>{
+    let {id} = req.params;
+    posts = posts.filter((p)=> id !==p.id);
+    res.redirect("/posts");
+})
+
+
 app.get("/posts/:id/edit",(req,res)=>{
     let {id} = req.params;
     let post = posts.find((p)=> id===p.id);
@@ -80,3 +87,4 @@ app.get("/posts/:id/edit",(req,res)=>{
 app.listen(port,()=>{
     console.log(`Listening on ==> localhost:${port}`);
 })
+
